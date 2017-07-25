@@ -63,9 +63,9 @@
                         </div>-->
                         <a class="dropbtn"><i class="fa fa-user"></i></a>
                         <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a ng-click="vm.onClickProfile()">Profile</a>
+                            <a>{{ vm.user.name }}</a>
+                            <a ng-click="vm.onClick()">Logout</a>
                         </div>
                     </li>
                 </ul>
