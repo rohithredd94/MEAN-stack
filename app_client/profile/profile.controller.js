@@ -4,8 +4,8 @@
     .module('meanApp')
     .controller('profileCtrl', profileCtrl);
 
-  profileCtrl.$inject = ['$location', 'meanData'];
-  function profileCtrl($location, meanData) {
+  profileCtrl.$inject = ['$location', 'meanData','authentication'];
+  function profileCtrl($location, meanData, authentication) {
     var vm = this;
 
     vm.user = {};
@@ -17,6 +17,12 @@
       .error(function (e) {
         console.log(e);
       });
+    console.log("Profile controller");
+    vm.onClick = function(){
+      console.log("Logging Out");
+      authentication.logout();
+      $location.path("/");
+    }
   }
 
 })();
