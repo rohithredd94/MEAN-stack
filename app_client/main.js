@@ -24,6 +24,11 @@
         controller: 'profileCtrl',
         controllerAs: 'vm'
       })
+      .when('/main', {
+        templateUrl: '/main/main.view.html',
+        controller: 'mainCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({redirectTo: '/'});
 
     // use the HTML5 History API
@@ -39,7 +44,7 @@
         $location.path('/');
       }else if(($location.path() === '/'/* || $location.path() === '/register'*/) && authentication.isLoggedIn()){ //Change by Rohith
         console.log('Checking if logged in-2');
-        $location.path('/profile');
+        $location.path('/main');
       }
       
 

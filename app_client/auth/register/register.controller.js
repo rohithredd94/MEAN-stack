@@ -24,9 +24,9 @@
           if(err.message = "User Already exists")
             vm.credentials.message = "User Already Exists";
         })
-        /*.success(function(){
-          $location.path('profile');
-        });*/
+        .success(function(){
+          $location.path('main');
+        });
         // .then(function(){
         //   console.log("Inside the function");
         //   if(!authentication.isLoggedIn())

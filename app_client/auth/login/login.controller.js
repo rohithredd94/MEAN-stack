@@ -26,7 +26,7 @@
           vm.credentials.message = "Incorrect credentials";
         })
         .then(function(){
-          $location.path('profile');
+          $location.path('main');
         });
     };
 
